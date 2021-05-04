@@ -82,6 +82,30 @@ jeppe.addEventListener("click", (e) => {
     }
 });
 
+mads.addEventListener("click", (e) => {
+    if (notClicked || person === "sia" || person === "jeppe") {
+        notClicked = false;
+        person = "mads";
+        imageDisp = 1;
+        now.src="./images/mads/1.jpg";
+        before.src="./images/mads/31.jpg";
+        next.src="./images/mads/2.jpg";
+        next.style.display = "inline-block";
+        before.style.display = "inline-block";
+        now.style.display = "inline-block";
+        arrowNext.style.display = "inline-block";
+        arrowBef.style.display = "inline-block";
+    } else {
+        next.style.display = "none";
+        before.style.display = "none";
+        now.style.display = "none";
+        arrowNext.style.display = "none";
+        arrowBef.style.display = "none";
+        notClicked = true;
+        person="";
+    }
+});
+
 arrowNext.addEventListener("click", (e) => {
     if (person === "sia") {
         imageDisp += 1;
@@ -120,6 +144,26 @@ arrowNext.addEventListener("click", (e) => {
             nextImageNum = 1;
         }
         nextImage = "./images/jeppe/" + nextImageNum + ".jpg";
+        before.src=beforeImage;
+        next.src=nextImage;
+    }
+    else if (person === "mads") {
+        imageDisp += 1;
+        if (imageDisp > 31) {
+            imageDisp = 1;
+        }
+        nowImage = "./images/mads/" + imageDisp + ".jpg";
+        now.src=nowImage;
+        beforeImageNum = imageDisp - 1;
+        if (beforeImageNum === 0) {
+            beforeImageNum = 31;
+        }
+        beforeImage = "./images/mads/" + beforeImageNum + ".jpg";
+        nextImageNum = imageDisp + 1;
+        if (nextImageNum === 32) {
+            nextImageNum = 1;
+        }
+        nextImage = "./images/mads/" + nextImageNum + ".jpg";
         before.src=beforeImage;
         next.src=nextImage;
     }
@@ -163,6 +207,26 @@ arrowBef.addEventListener("click", (e) => {
             nextImageNum = 1;
         }
         nextImage = "./images/jeppe/" + nextImageNum + ".jpg";
+        before.src=beforeImage;
+        next.src=nextImage;
+    }
+    else if (person === "mads") {
+        imageDisp -= 1;
+        if (imageDisp < 1) {
+            imageDisp = 31;
+        }
+        nowImage = "./images/mads/" + imageDisp + ".jpg";
+        now.src=nowImage;
+        beforeImageNum = imageDisp - 1;
+        if (beforeImageNum === 0) {
+            beforeImageNum = 31;
+        }
+        beforeImage = "./images/mads/" + beforeImageNum + ".jpg";
+        nextImageNum = imageDisp + 1;
+        if (nextImageNum === 32) {
+            nextImageNum = 1;
+        }
+        nextImage = "./images/mads/" + nextImageNum + ".jpg";
         before.src=beforeImage;
         next.src=nextImage;
     }
