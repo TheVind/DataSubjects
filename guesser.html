@@ -30,7 +30,7 @@
                 Food Guesser
             </h1>
         <p class="textBody">
-            On this site you can upload an image of your food, and see who of the 3 of us (Sia, Mads, and Jeppe) it looks like the most according to our dataset.<br><br>
+            On this site you can upload an image of your food, and see which of the three of us (Sia, Jeppe, Mads) whose cooking it looks the most similar too.<br><br>
             In order to do so, please upload you file below and afterwards press the "Start" button:
         </p>
 
@@ -77,18 +77,18 @@
         console.log(prediction)
         // append elements to the DOM
 
-        for (let i = 0; i < prediction; i++) {
-            document.createTextNode(predictions[i])
-        } 
+        
 
         var list = document.createElement("ul");
-
+        
         prediction.forEach(function (prediction) {
             var li = document.createElement("li");
-            li.textContent = prediction;
+            prob = prediction.probability*100;
+            
+            li.textContent = prediction.className + " - " + prob.toFixed(2) + "%"
             list.appendChild(li);
         });
-
+        
         var predictions = document.querySelector("#predictions");
         predictions.appendChild(list);
 
