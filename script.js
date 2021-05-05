@@ -1,7 +1,7 @@
 const TeachableMachine = require("@sashido/teachablemachine-node");
 
 const model = new TeachableMachine({
-  modelUrl: "https://teachablemachine.withgoogle.com/models/5vbX_J2PS//"
+  modelUrl: "https://teachablemachine.withgoogle.com/models/5vbX_J2PS/"
 });
 
 model.classify({

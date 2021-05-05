@@ -31,15 +31,84 @@
             </h1>
         <p class="textBody">
             On this site you can upload an image of your food, and see who of the 3 of us (Sia, Mads, and Jeppe) it looks like the most according to our dataset.<br><br>
-            In order to do so, please upload you file below:
+            In order to do so, please upload you file below and afterwards press the "Start" button:
         </p>
+
+        
+        <input type='file' /> <br>
+
+        <img id="guessImg" src="#" alt="your image">
+
+
+        <button type='button' onclick='init()'>Start</button>
+
+        <div id="predictions">
+
+        </div>
+
+<div id='webcam-container'></div>
+<div id='label-container'></div>
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8.3/dist/teachablemachine-image.min.js"></script>
+<script type="text/javascript">
+
+    // the link to your model provided by Teachable Machine export panel
+    const URL = 'https://teachablemachine.withgoogle.com/models/5vbX_J2PS/';
+
+    let model, iamge, labelContainer, maxPredictions;
+    let prediction 
+
+    async function init() {
+        const modelURL = URL + 'model.json';
+        const metadataURL = URL + 'metadata.json';
+
+        // load the model and metadata
+
+        model = await tmImage.load(modelURL, metadataURL);
+        maxPredictions = model.getTotalClasses();
+
+        
+        prediction = await model.predictTopK(
+            document.getElementById("guessImg"),
+            maxPredictions = 10,
+            flipped = false
+
+        )
+        console.log(prediction)
+        // append elements to the DOM
+
+        for (let i = 0; i < prediction; i++) {
+            document.createTextNode(predictions[i])
+        } 
+
+        var list = document.createElement("ul");
+
+        prediction.forEach(function (prediction) {
+            var li = document.createElement("li");
+            li.textContent = prediction;
+            list.appendChild(li);
+        });
+
+        var predictions = document.querySelector("#predictions");
+        predictions.appendChild(list);
+
+        
+        labelContainer = document.getElementById('label-container');
+        for (let i = 0; i < maxPredictions; i++) { // and class labels
+            labelContainer.appendChild(document.createElement('div'));
+        }
+    }
+</script>
+
+    
+
+
+
 
         
 
 
-        <input type='file' /> <br>
-
-        <img id="guessImg" src="#" alt="your image">
+        
 
 
         </div>

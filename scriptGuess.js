@@ -3,10 +3,10 @@ window.addEventListener('load', function() {
         if (this.files && this.files[0]) {
             var img = document.querySelector('img');
             img.onload = () => {
-                URL.revokeObjectURL(img.src);  // no longer needed, free memory
+                window.URL.revokeObjectURL(img.src);  // no longer needed, free memory
             }
             img.style.display = "inline-block";
-            img.src = URL.createObjectURL(this.files[0]); // set src to blob url
+            img.src = window.URL.createObjectURL(this.files[0]); // set src to blob url
             img.style.height = "40vh";
         }
         console.log(img.src)
