@@ -17,11 +17,12 @@
     <body>
         <div id="banner">
             <a href="index.html" id="uncharted">Uncharted Data</a>
-            <a href="index.html">Home</a>
-            <a href="guesser.html">Food Guesser</a>
-            <a href="images.html">Images</a>
-            <a href="theory.html">Theoretical Background</a>
-            <a href="references.html">References</a>
+            <a id="breaker"></a>
+            <a href="index.html" class="tabs" id="leftmost">Home</a>
+            <a href="guesser.html" class="tabs">Food Guesser</a>
+            <a href="images.html" class="tabs">Images</a>
+            <a href="theory.html" class="tabs">Theoretical Background</a>
+            <a href="references.html" class="tabs">References</a>
         </div>
         <div id="body">
         </div>
@@ -31,8 +32,21 @@
             </h1>
             <p class="textBody">
                 Welcome to our website, which is the final product of the course "Data Subjects" at Aarhus University's supplementary course "Critical Data Studies" 2021.<br><br>
-                This project were developed by Mads Vestergaard, Sia Kofoed-Heller, and Jeppe Vind.
+                This project were developed by Mads Vestergaard, Sia Kofoed-Heller, and Jeppe Vind.<br><br>
+                The aim of the project, were to collect and display data that has not previously been collected, either because of the complexity of collecting it, or just the lack of value related to the data.<br>
+                For this project we chose to document what we had to eat, through images, and then create a machinelearning model with this dataset using Teachablemachine with Google.<br>
+                This created a model, which can predict whose dinner one is eating, or tell you whose dinner it would most likely look like.<br>
+                You can access this feature at the tab "Food Guesser".<br><br>
+                The reasoning for our line of approach were, that it would be interesting to see how accurately the model could predict the meals, and which factors comes into play in it guessing who could be the creator if the meal.<br>
+                This gives us a standpoint to talk about how other machinelearning models work, why they work, and what implications they may have on both the individual as well as society.<br>
+                In other words, how are we as dividuals (Cheney-Lippold, 2017) represented through the abstractions, which have created a "Digital Persona" (Clarke, 2019) of us, how that persona represents us, which agency it has, and what the implications of the feedback it creates might be.<br>
+                You can read more of the theoretical background behind the project under the tab "Theoretical Background".<br>
+                The model below also comes from Clarke's (2019) paper, on how surveillance structures creates "Digital Personas" and influence the individual under different circumstances. Anderson's (2018) model is further used to explain the machinelearning part, which we in this project investigate.<br>
+                This model fasciliates a theoretical discussion as how the different inputs to the machine creates different outputs and hence consequences, hence why it is included.<br><br>
+                The website is created using vanilla JavaScript, HTML and CSS to display our findings, dataset, and to make the machinelearning model easily accessible, using Git as version control.<br>
+                You can view our dataset under the tab "Images", where you can scroll through the images used.<br><br>
             </p>
+            <img id="model" src="./images/machineLearningModel.png">
         </div>
     </body>
 </html>
