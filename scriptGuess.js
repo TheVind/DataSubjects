@@ -10,6 +10,7 @@ window.addEventListener('load', function() {
             img.style.height = "40vh";
             var button = document.getElementById("theButton");
             button.style.display = "inline-block";
+            init();
         }
         console.log(img.src)
     });

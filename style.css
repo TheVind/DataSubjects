@@ -13,21 +13,20 @@ body {
 
 #banner {
     display: inline-block;
-    width: 100%;
-    height: 3%;
+    width: 100vw;
     position: fixed;
     top: 0px;
     left: 0px;
     background-color: #F17A7E;
-    padding-top: 0.2%;
-    padding-bottom: 0.4%;
+    padding-top: 0.2vh;
+    padding-bottom: 0.4vh;
     text-decoration: none;
     z-index: 4;
 }
 
 #banner>a {
-    padding-right: 4%;
-    padding-top: 10%;
+    padding-right: 4vw;
+    padding-top: 10vw;
     color: #F9FAF4;
     text-decoration: none;
 }
@@ -41,8 +40,8 @@ body {
 }
 
 #uncharted {
-    margin-right: 30%;
-    padding-left: 1.5%;
+    margin-right: 20vw;
+    padding-left: 1.5vw;
     font-family: Papyrus, fantasy;
     font-weight: bolder;
     font-size: x-large;
@@ -52,37 +51,37 @@ body {
     background-color: #F9A66C;
     z-index: 2;
     position: fixed;
-    margin-left: 10%;
-    margin-top: 2%;
-    margin-right: 10%;
-    width: 80%;
-    height: 96%;
+    margin-left: 10vw;
+    margin-top: 2vh;
+    margin-right: 10vw;
+    width: 80vw;
+    height: 98vh;
     opacity: 20%;
 }
 
 #body2 {
     z-index: 3;
     position: absolute;
-    margin-left: 12%;
-    margin-top: 2%;
-    margin-right: 12%;
-    width: 76%;
-    padding-bottom: 40%;
+    margin-left: 12vw;
+    margin-top: 4vh;
+    margin-right: 12vw;
+    width: 76vw;
+    padding-bottom: 40vh;
     opacity: 100%;
 }
 
 #selector {
-    width: 100%;
+    width: 100vw;
     display: inline-block;
 }
 
 #images {
-    padding-top: 5%;
+    padding-top: 5vh;
     display: inline-block;
 }
 
 #selector>img {
-    padding-right: 5%;
+    padding-right: 5vw;
 }
 
 #next, #before, #now {
@@ -90,34 +89,34 @@ body {
 }
 
 #next, #before {
-    width: 25%;
+    width: 25vw;
     opacity: 50%;
     position: absolute;
     z-index: 4;
 }
 #now {
-    width: 40%;
-    left: 30%;
+    width: 40vw;
+    left: 30vw;
     position: absolute;
-    margin-top: 5%;
+    margin-top: 5vh;
     z-index: 5;
 }
 #next {
-    right: 10%;
+    right: 10vw;
 }
 #before {
-    left: 10%;
+    left: 10vw;
 }
 
 #arrowNext, #arrowBef {
-    width: 4%;
+    width: 4vw;
     display: none;
-    bottom: 13%;
+    bottom: 13vh;
     z-index: 6;
 }
 
 #arrowNext {
-    right: 15%;
+    right: 15vw;
     position: absolute;
 }
 
@@ -125,7 +124,7 @@ body {
     -webkit-transform: scaleX(-1);
     transform: scaleX(-1);
     position: absolute;
-    left: 15%;
+    left: 15vw;
 }
 
 .headline {
@@ -152,4 +151,8 @@ body {
 
 #guessImg {
     display: none;
+}
+
+#model {
+    width: 75vw;
 }
