@@ -9,9 +9,10 @@ window.addEventListener('load', function() {
             img.src = window.URL.createObjectURL(this.files[0]); // set src to blob url
             img.style.height = "40vh";
             var button = document.getElementById("theButton");
-            button.style.display = "inline-block";
             init();
+            
         }
+        
         console.log(img.src)
     });
   });
