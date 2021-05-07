@@ -7,7 +7,7 @@ Red: #F17A7E
 }*/
 
 body { 
-    margin:0; 
+    margin:0;
     background-color: #F9FAF4;
 }
 
@@ -26,7 +26,6 @@ body {
 
 #banner>a {
     padding-right: 4vw;
-    padding-top: 10vw;
     color: #F9FAF4;
     text-decoration: none;
 }
@@ -40,7 +39,7 @@ body {
 }
 
 #uncharted {
-    margin-right: 20vw;
+    margin-right: 15vw;
     padding-left: 1.5vw;
     font-family: Papyrus, fantasy;
     font-weight: bolder;
@@ -71,12 +70,11 @@ body {
 }
 
 #selector {
-    width: 100vw;
     display: inline-block;
 }
 
 #images {
-    padding-top: 5vh;
+    padding-top: 5%;
     display: inline-block;
 }
 
@@ -93,30 +91,32 @@ body {
     opacity: 50%;
     position: absolute;
     z-index: 4;
+    top: 22vh;
 }
 #now {
     width: 40vw;
-    left: 30vw;
+    left: 25%;
     position: absolute;
     margin-top: 5vh;
     z-index: 5;
+    top: 25vh;
 }
 #next {
-    right: 10vw;
+    right: 10%;
 }
 #before {
-    left: 10vw;
+    left: 10%;
 }
 
 #arrowNext, #arrowBef {
     width: 4vw;
     display: none;
-    bottom: 13vh;
+    bottom: 1vh;
     z-index: 6;
 }
 
 #arrowNext {
-    right: 15vw;
+    right: 13vw;
     position: absolute;
 }
 
